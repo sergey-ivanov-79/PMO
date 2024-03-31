@@ -1,0 +1,38 @@
+.btn:focus {
+  outline: none !important;
+  box-shadow: none;
+}
+.btn {
+  font-family: "Montserrat", sans-serif;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: normal;
+  color: #ffffff;
+  padding: 20px 10px;
+  border-radius: 0px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  transition: all .35s;
+  height: 84px;
+  @media (max-width: 1440px) {
+    height: 64px;
+    font-size: 18px;
+  }
+  @media (max-width: 991.98px) {
+    height: 54px;
+    font-size: 18px;
+  }
+  &-black {
+    background: #1D1D1B;
+    border-color: #1D1D1B;
+    color: #ffffff;
+    &:hover {
+      background: #ffffff;
+      border-color: #1D1D1B;
+      color: #1D1D1B;
+    }
+  }
+}

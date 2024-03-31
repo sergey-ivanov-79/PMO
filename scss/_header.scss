@@ -1,0 +1,148 @@
+.on {
+  .navbar {
+    background: #ffffff;
+    box-shadow: 0px 0px 6px #1D1D1B;
+  }
+  &.menu-open {
+    .navbar {
+      box-shadow: none;
+    }
+  }
+}
+.top_nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.menu-toggle {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  cursor: pointer;
+}
+.header {
+  &_home {
+    .navbar {
+      background-color: #ffffff;
+    }
+  }
+}
+.navbar {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  transition: all 0.3s;
+  &.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 21;
+    // background: #fff;
+  }
+}
+.menu {
+  display: flex;
+  div {
+    background: #000;
+    content: "";
+    display: block;
+    width: 2px;
+    height: 35px;
+    border-radius: 3px;
+    margin: 0px 5px;
+    transition: 0.5s;
+  }
+}
+.text_menu {
+  margin-right: 10px;
+  span {
+    &:last-child {
+      display: none;
+    }
+  }
+}
+.logo-img {
+  @media (max-width: 575.98px) {
+    max-width: 190px;
+  }
+}
+.menu-open {
+  .navbar {
+    background: #ffffff;
+  }
+  .menu {
+    > div {
+      &:nth-child(1) {
+        transform: translateY(0px) translateX(12px) rotate(135deg);
+      }
+      &:nth-child(2) {
+        transform: scale(0);
+      }
+      &:nth-child(3) {
+        transform: translateY(0px)  translateX(-12px)  rotate(-135deg);
+      }
+    }
+  }
+  .text_menu {
+    span {
+      &:first-child {
+        display: none;
+      }
+      &:last-child {
+        display: block;
+      }
+    }
+  }
+}
+.menu_text {
+  color: #8F8F8F;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: 0.24px;
+  margin-bottom: 36px;
+  @media (max-width: 767.98px) {
+    margin-bottom: 24px;
+  }
+}
+.menu_big {
+  overflow: hidden;
+}
+.menu_big_link {
+  color: #1D1D1B;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: 0.48px;
+  margin-bottom: 24px;
+  @media (max-width: 991.98px) {
+    font-size: 42px;
+  }
+  @media (max-width: 767.98px) {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+}
+.menu_min_link {
+  color: #1D1D1B;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: 0.22px;
+  margin-bottom: 24px;
+  @media (max-width: 991.98px) {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+.ul_menu {
+  li {
+    a {
+      transition: all 0.3s;
+      &:hover {
+        opacity: 0.5 !important;
+      }
+    }
+  }
+}

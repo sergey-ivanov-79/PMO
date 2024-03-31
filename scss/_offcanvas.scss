@@ -1,0 +1,63 @@
+.hidden {
+  overflow: hidden;
+}
+.overlay {
+  overflow: auto;
+  position: fixed;
+  z-index: 20;
+  right: 0;
+  bottom: 0;
+  top: 106px;
+  left: 0;
+  height: 0;
+  transition: all 0.5s ease;
+  .overlay_bg {
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: all 0.5s ease;
+    z-index: 1;
+    width: 100%;
+    height: 0;
+  }
+  .menu_block {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    width: 100%;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    transition: all 1s ease;
+    overflow: auto;
+  }
+  &.active {
+    height: 100%;
+    .overlay_bg {
+      height: 100%;
+    }
+    .menu_block {
+      top: 0px;
+      padding-top: 15%;
+      @media (max-width: 991.98px) {
+        padding-top: 20%;
+      }
+      @media (max-width: 575.98px) {
+        padding-top: 35%;
+      }
+    }
+  }
+}
+@keyframes animate {
+  from {
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    transform: translate3d(0, 0%, 0);
+  }
+}
+.animate {
+  animation-duration: 2s;
+  animation-name: animate;
+}

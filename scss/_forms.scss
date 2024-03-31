@@ -1,0 +1,53 @@
+
+.form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #8F8F8F;
+  font-family: "Montserrat", sans-serif;
+}
+.form-control::-moz-placeholder { /* Firefox 19+ */
+  color: #8F8F8F;
+  font-family: "Montserrat", sans-serif;
+}
+.form-control:-ms-input- { /* IE 10+ */
+  color: #8F8F8F;
+  font-family: "Montserrat", sans-serif;
+}
+.form-control:-moz-placeholder { /* Firefox 18- */
+  color: #8F8F8F;
+  font-family: "Montserrat", sans-serif;
+}
+.main_form {
+  .form-control {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: normal;
+    color: #1D1D1B;
+    position: relative;
+    transition: all 0.3s;
+    border: 1px solid #949494;
+    border-radius: 0px !important;
+    padding: 24px 18px;
+    width: 100%;
+    &:focus {
+      border-color: #1D1D1B;
+      box-shadow: none;
+      outline: none;
+    }
+    @media (max-width: 1440px) {
+      font-size: 20px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    @media (max-width: 991.98px) {
+      font-size: 18px;
+    }
+    @media (max-width: 767.98px) {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+  }
+  .textarea {
+    // height: 298px;
+    height: auto;
+  }
+}
